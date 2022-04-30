@@ -22,3 +22,7 @@ def index(request):
 def health(request):
     """Takes an request as a parameter and gives the count of pageview objects as reponse"""
     return HttpResponse(PageView.objects.count())
+
+def hellr(request):
+    """Takes an request as a parameter and gives the count of pageview objects as reponse"""
+    return HttpResponse(PageView.objects.count())
