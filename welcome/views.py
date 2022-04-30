@@ -25,4 +25,4 @@ def health(request):
 
 def hellr(request):
     """Takes an request as a parameter and gives the count of pageview objects as reponse"""
-    return HttpResponse(PageView.objects.count())
+    return "<h1>Fiannly got this thing working</h1>"
