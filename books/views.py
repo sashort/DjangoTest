@@ -31,10 +31,19 @@ def hellr(request):
 class FormBasics(View):
     def get(self, request):
         form = BasicForm()
+        post_form = BasicForm()
         context = {
-            'form': form
+            'form': form,
+            'post_form': post_form
         }
         return render(request, 'books/forms_basics.html', context)
 	
     def post(self, request):
-        pass
+        post_form = BasicForm(request.POST)
+        form = BasicForm()
+        context = {
+            'post_form': post_formm
+            'form': form
+        }
+        return render(request, 'catalog/forms_basics.html', context)
+		
