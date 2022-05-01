@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^hellr$', hellr),
     url(r'^$', book_list),
     url(r'^books/<int:id>$', book_detail),
-	url(r'^forms-basics', FormsBasics.as_view())
+	url(r'^forms-basics', FormBasics.as_view())
 ]
 
 if settings.DEBUG:
