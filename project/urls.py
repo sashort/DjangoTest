@@ -2,8 +2,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from welcome.views import index, health, hellr
-from books.views import book_list, book_detail
+from books.views import book_list, book_detail, hellr
 
 urlpatterns = [
     # Examples:
