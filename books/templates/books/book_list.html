@@ -1,0 +1,51 @@
+{% block content %}
+<head>
+	<style>
+		html { background-image: linear-gradient(#333, #FFF); color: white; font-family: helvetica; }
+		th { background-image: linear-gradient(#000, #333); color: white; }
+		td { background-color: white; color: black;}
+		tr:hover a::after {whote-spacwe: pre; content: '  ◀';}
+		a {text-decoration: none; color: black;}
+		html * {animation-name: appear; animation-duration: 1s;}
+		@keyframes appear {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+	<h2>Classic Books List</h2>
+		{% if book_list %}
+		<dl>
+			<table class="Classic Books List" border="2" cellpadding="8">
+				<caption><h3>Classic Books List</h3></caption>
+				<thead>
+					<tr>
+						<th><h4>Rank</h4></th>
+						<th><h4>Title</h4></th>
+						<th><h4>Author</h4></th>
+						<th><h4>Year</h4></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for book in book_list %}
+					<tr>
+						<td><a href="/books/{{ book.id }}">{{ book.rank }}</a></td>
+						<td>{{ book.title }}</td>
+						<td>{{ book.author }}</td>
+						<td>{{ book.year }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</dl>
+		{% else %}
+		<p>No Classic Books found.</p>
+		{% endif %}
+{% endblock %}
+	
+		
