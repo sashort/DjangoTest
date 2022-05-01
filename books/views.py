@@ -42,7 +42,7 @@ class FormBasics(View):
         post_form = BasicForm(request.POST)
         form = BasicForm()
         context = {
-            'post_form': post_formm
+            'post_form': post_form,
             'form': form
         }
         return render(request, 'catalog/forms_basics.html', context)
