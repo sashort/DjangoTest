@@ -10,7 +10,6 @@ from .models import Book
 
 def book_list(request):
     books = Book.objects.all()
-    return HttpResponse("There are " + len(books) + "books in the collection")
     context = {'book_list':books}
     return render(request, "books/book_list.html",context)
 
