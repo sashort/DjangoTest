@@ -8,4 +8,5 @@ from .models import PageView, Book
 class PageViewAdmin(admin.ModelAdmin):
     list_display = ['hostname', 'timestamp']
 
-admin.site.register(PageView, PageViewAdmin, Book)
+admin.site.register(PageView, PageViewAdmin)
+admin.site.register(Book)
