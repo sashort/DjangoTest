@@ -32,8 +32,8 @@ class FormBasics(View):
         form = BasicForm()
         context = {
             'form': form
-    }
-    return render(request, 'books/forms_basics.html', context)
+        }
+        return render(request, 'books/forms_basics.html', context)
 	
     def post(self, request):
         pass
