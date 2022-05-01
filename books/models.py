@@ -10,3 +10,7 @@ class Book(models.Model):
     	
     def __str__(self):
         return self.author
+
+class PageView(models.Model):
+    hostname = models.CharField(max_length=32)
+    timestamp = models.DateTimeField(auto_now_add=True)
