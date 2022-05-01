@@ -24,16 +24,16 @@ def health(request):
     return HttpResponse(PageView.objects.count())
 
 def book_list(request):
-	books = Book.objects.all()
-	context = {'book_list':books}
-	print(context)
-	return render(request, "books/book_list.html",context)
+    books = Book.objects.all()
+    context = {'book_list':books}
+    print(context)
+    return render(request, "books/book_list.html",context)
 
 
 def book_detail(request, id):
-	book = Book.objects.get(id = id)
-	context = {'book_detail': book}
-	return render(request, "books/book_detail.html",context)
+    book = Book.objects.get(id = id)
+    context = {'book_detail': book}
+    return render(request, "books/book_detail.html",context)
 
 def hellr(request):
     """Takes an request as a parameter and gives the count of pageview objects as reponse"""
