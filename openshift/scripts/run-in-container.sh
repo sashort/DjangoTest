@@ -30,6 +30,9 @@
 # Or both together:
 #
 #     POD_NAME=frontend POD_INDEX=2 ./run-in-container.sh ./manage.py shell
+./run-in-container.sh ./manage.py migrate
+./manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'essayshort@gmail.com', '(blInk309)')"
+#./run-in-container.sh ./manage.py shell
 
 
 # Get name of a currently deployed pod by label and index
