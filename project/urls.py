@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from books.views import book_list, book_detail, hellr
+from books.views import book_list, book_detail, hellr, FormBasics
 
 urlpatterns = [
     # Examples:
@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^hellr$', hellr),
     url(r'^$', book_list),
     url(r'^books/<int:id>$', book_detail),
+	url(r'^forms-basics', FormsBasics.as_view())
 ]
 
 if settings.DEBUG:
