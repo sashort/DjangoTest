@@ -1,0 +1,30 @@
+{% block content %}
+<head>
+	<style>
+		html { background-image: linear-gradient(#333, #FFF); color: white; font-family: helvetica;}
+		th { background-image: linear-gradient(#000, #333); color: white; }
+		td { background-color: white; color: black;}
+		a {text-decoration: none; color: black;}
+		html * {animation-name: appear; animation-duration: 1s;}
+		@keyframes appear {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+	<h2>Classic&nbsp;Book&nbsp;Details</h2>
+	{% if book_detail %}
+	<h3>Ranked&nbsp;#{{ book_detail.rank }}</h3>
+	<h4>TITLE:&nbsp;{{ book_detail.title }}</h4>
+	<h4>Written by:&nbsp;<em>{{ book_detail.author }}</em>&nbsp;in&nbsp;{{ book_detail.year }}</h4>
+	{% else %}
+	<p>Invalid&nbsp;Classic&nbsp;Book&nbsp;ID&nbsp;&#8212;&nbsp;Not&nbsp;found.</p>
+	{% endif %}
+{% endblock %}
+	
+		
