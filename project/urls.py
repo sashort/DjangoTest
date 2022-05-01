@@ -13,6 +13,8 @@ urlpatterns = [
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hellr$', hellr),
+    path('', book_list),
+	path('<id>/', book_detail),
 ]
 
 if settings.DEBUG:
