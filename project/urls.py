@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import include, url, path
 from django.contrib import admin
 
 from welcome.views import index, health, hellr, book_list, book_detail
